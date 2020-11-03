@@ -10,4 +10,5 @@ Development Lead
 Contributors
 ------------
 
-None yet. Why not be the first?
+* Laurentia Naidu <ndxlau007@myuct.ac.za>
+

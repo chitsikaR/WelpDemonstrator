@@ -3,14 +3,14 @@ WelpDemonstrator
 ================
 
 
-.. image:: https://img.shields.io/pypi/v/welpdemonstrator.svg
-        :target: https://pypi.python.org/pypi/welpdemonstrator
+.. image:: https://img.shields.io/pypi/v/Welpdemonstrator.svg
+        :target: https://pypi.python.org/pypi/WelpDemonstrator
 
-.. image:: https://img.shields.io/travis/chitsikaR/welpdemonstrator.svg
-        :target: https://travis-ci.com/chitsikaR/welpdemonstrator
+.. image:: https://img.shields.io/travis/chitsikaR/WelpDemonstrator.svg
+        :target: https://travis-ci.com/chitsikaR/WelpDemonstrator
 
-.. image:: https://readthedocs.org/projects/welpdemonstrator/badge/?version=latest
-        :target: https://welpdemonstrator.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/Welpdemonstrator/badge/?version=latest
+        :target: https://WelpDemonstrator.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
 
@@ -20,7 +20,7 @@ This project contains the API to demonstrate use of our Welp API.
 
 
 * Free software: GNU General Public License v3
-* Documentation: https://welpdemonstrator.readthedocs.io.
+* Documentation: https://WelpDemonstrator.readthedocs.io.
 
 
 Features

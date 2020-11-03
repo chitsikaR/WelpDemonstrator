@@ -32,13 +32,13 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/chitsikaR/welpdemonstrator
+    $ git clone git://github.com/chitsikaR/WelpDemonstrator
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl -OJL https://github.com/chitsikaR/welpdemonstrator/tarball/master
+    $ curl -OJL https://github.com/chitsikaR/WelpDemonstrator/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/chitsikaR/welpdemonstrator
-.. _tarball: https://github.com/chitsikaR/welpdemonstrator/tarball/master
+.. _Github repo: https://github.com/chitsikaR/WelpDemonstrator
+.. _tarball: https://github.com/chitsikaR/WelpDemonstrator/tarball/master

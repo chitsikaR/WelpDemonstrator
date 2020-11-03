@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
-SPHINXPROJ    = welpdemonstrator
+SPHINXPROJ    = WelpDemonstrator
 SOURCEDIR     = .
 BUILDDIR      = _build
 
