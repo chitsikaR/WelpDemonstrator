@@ -22,7 +22,7 @@ deploy:
   distributions: sdist bdist_wheel
   user: chitsikaR
   password:
-    secure: PLEASE_REPLACE_ME
+    secure:  "IUKmnlNkWR6o6v47QzRYFym8PBSkwX+goBolLM7gJmSrnYAA/l2SWaVLnJHWQXo6uP1SE9UQRyZ9IW+3LvEcdIVGmE7dgUloXk2tDT7xNDOokRoJDJm9c9PrX1MxzBdf/0y+hP3PtmsOS0LGWbfBjNuPC0j0r2cVd6Pfig3cLYoxg16OZd/21+B19jARMAUpbFrenD9N2VWC31uHTq3S3nVUC61P+03jA3HrfgtfitEgVScii9T4rbvr/5fAHrQoBTg6gQA7FBJe58JiI3w0mVpujGgC/nWupcXwYxeihJJs0FdRYsUMTm2Sjbtln0HcmFMIxWrKARcZTZS+QYRwEoHwcDwXgDdHgC/ZvVr8GxPOF37dkdQOI0GEVPwQRxPL1wB0SrZF6MLxV8UcC4rPE5WGqm71fIpkB9oRlzzvVa7FrpbxX66yJFsb+OWXOQpA5Kh7j+LjC+rH93kt2jHV6N3gDcMLhjPcf3e1lKYVV7A8J3c7gkPJli5Ugfrj2lODkHOQTyoPx6gev3bfV2Euk7zRvv1ve7xYAHiVFLZKrsFEAs/G4ZXZpwuolrHGLcQlHSyKEzI8yUd/YvM6tfuzJXNgRyXf5dlKdd29Y5SnjuwPTgzjvXSCcrAT1t2+kx0TysV31LZOJEs3CMu0dQo9Oy/j79YD/Yf0mFoANLkr0rQ=" 
   on:
     tags: true
     repo: chitsikaR/welpdemonstrator
