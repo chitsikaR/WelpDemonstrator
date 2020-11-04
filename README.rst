@@ -22,14 +22,26 @@ This project contains the API to demonstrate use of our Welp API. Welp is intend
 * Free software: GNU General Public License v3
 * Documentation: https://WelpDemonstrator.readthedocs.io.
 
+## Installation
+
+[![Build Status](https://travis-ci.org/chitsikaR/WelpDemonstrator.png?branch=master)](https://travis-ci.org/chitsikaR/WelpDemonstrator)
+
+welpdemonstrator highly makes use of the **smtplib** library so before you begin, you need to have that package installed.
+
+    $ sudo pip install smtplib
+    $ sudo pip install python-firebase
+    $ sudo pip install welpdemonstrator
 
 Features
 --------
 
-* TODO
+TODO
+-------
+* Docs must be generated.
 
 Credits
 -------
+* To everyone who has help me develop this API 
 
 This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
 
