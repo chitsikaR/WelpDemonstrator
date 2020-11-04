@@ -8,7 +8,7 @@ WelpDemonstrator
 
 .. image:: https://readthedocs.org/projects/Welpdemonstrator/badge/?version=latest
         :target: https://WelpDemonstrator.readthedocs.io/en/latest/?badge=latest
-        :alt: Documentation Status
+        
 
 .. image:: https://travis-ci.org/chitsikaR/WelpDemonstrator.png?branch=master
         :target: https://travis-ci.org/chitsikaR/WelpDemonstrator
@@ -20,7 +20,7 @@ This project contains the API to demonstrate use of our Welp API. Welp is intend
 * Free software: GNU General Public License v3
 * Documentation: https://WelpDemonstrator.readthedocs.io.
 
-## Installation
+Installation
 -----------------
 
 welpdemonstrator highly makes use of the **smtplib** library so before you begin, you need to have that package installed.
