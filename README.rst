@@ -16,7 +16,7 @@ WelpDemonstrator
 
 
 
-This project contains the API to demonstrate use of our Welp API.
+This project contains the API to demonstrate use of our Welp API. Welp is intended to be used with wearable technology in the IoT space to send alert messages with one's current location.
 
 
 * Free software: GNU General Public License v3
