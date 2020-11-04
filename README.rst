@@ -3,9 +3,6 @@ WelpDemonstrator
 ================
 
 
-.. image:: https://img.shields.io/pypi/v/Welpdemonstrator.svg
-        :target: https://pypi.python.org/pypi/WelpDemonstrator
-
 .. image:: https://img.shields.io/travis/chitsikaR/WelpDemonstrator.svg
         :target: https://travis-ci.com/chitsikaR/WelpDemonstrator
 
@@ -13,7 +10,8 @@ WelpDemonstrator
         :target: https://WelpDemonstrator.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-
+.. image:: https://travis-ci.org/chitsikaR/WelpDemonstrator.png?branch=master
+        :target: https://travis-ci.org/chitsikaR/WelpDemonstrator
 
 
 This project contains the API to demonstrate use of our Welp API. Welp is intended to be used with wearable technology in the IoT space to send alert messages with one's current location.
@@ -23,10 +21,11 @@ This project contains the API to demonstrate use of our Welp API. Welp is intend
 * Documentation: https://WelpDemonstrator.readthedocs.io.
 
 ## Installation
-
-[![Build Status](https://travis-ci.org/chitsikaR/WelpDemonstrator.png?branch=master)](https://travis-ci.org/chitsikaR/WelpDemonstrator)
+-----------------
 
 welpdemonstrator highly makes use of the **smtplib** library so before you begin, you need to have that package installed.
+
+.. code-block:: bash
 
     $ sudo pip install smtplib
     $ sudo pip install python-firebase
