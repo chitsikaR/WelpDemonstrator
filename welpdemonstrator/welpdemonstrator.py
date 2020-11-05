@@ -1,6 +1,4 @@
-"""
-   Imports packages needed for the demonstrator to work
-"""
+"""Imports packages needed for the demonstrator to work"""
 import RPi.GPIO as GPIO
 import time
 from time import sleep
