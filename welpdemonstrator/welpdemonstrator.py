@@ -46,10 +46,6 @@ def setup():
 
     GPIO.output(buzzer, GPIO.LOW)
 
-   
-    global buzz
-    buzz = GPIO.PWM(buzzer, PWM_freq)
-
     GPIO.add_event_detect(btn_buzzer_email, GPIO.FALLING, callback= btn_buzzer_email_pressed, bouncetime=200) 
     GPIO.add_event_detect(btn_email_only, GPIO.FALLING, callback= btn_email_only_pressed, bouncetime= 2200)
 
@@ -60,29 +56,37 @@ def sendEmail():
        Sets up the email and drafts email message
        Gets textmessage from within a python script
     """
-    
+    # email sender
     msmtpUser = 'testeraccforbianca@gmail.com'
     msmtpPass = 'thisismytestermail'
 
+    # name of person who sent the distress signal
+    username = 'Laurentia'
+
+    # recipient of distress signal
     toAdd = 'naidubianca@gmail.com'
     fromAdd = msmtpUser
 
-    subject = 'demo test' 
-    header = 'To: '+toAdd+'\n'+'From: '+fromAdd+'\n'+'Subject: '+subject
-    body = testAPI.getTextMessage() 
+    subject = 'DISTRESS MESSAGE FORM WELP' 
+    header = 'To: '+ toAdd + '\n' + 'From: ' + fromAdd + '\n' + 'Subject: ' + subject
 
-    print (header+'\n'+body)
+    # email body
+    text_message = '***DISTRESS SIGNAL*** \n'
+    text_message = text_message + username + ' is in danger now at:\n'
+    body = text_message + testAPI.getTextMessage() 
 
-    s = smtplib.SMTP('smtp.gmail.com',587)
+    print (header + '\n' + body)
 
-    s.ehlo()
-    s.starttls()
-    s.ehlo()
+    message = smtplib.SMTP('smtp.gmail.com', 587)
 
-    s.login(msmtpUser, msmtpPass)
-    s.sendmail(fromAdd, toAdd, header +'\n\n' +body)
+    message.ehlo()
+    message.starttls()
+    message.ehlo()
 
-    s.quit()
+    message.login(msmtpUser, msmtpPass)
+    message.sendmail(fromAdd, toAdd, header +'\n\n' +body)
+
+    message.quit()
 
 def btn_buzzer_email_pressed(channel):
     """Automatically sends email and sounds the buzzer when pushbutton is pressed
@@ -91,7 +95,10 @@ def btn_buzzer_email_pressed(channel):
  
     while GPIO.input(channel) == 0: #check if the button was released
         trigger_buzzer()
-    buzz.stop()
+
+    # when button is released, turn off buzzer
+    GPIO.output(buzzer, GPIO.LOW)
+
     global buzzFlag
     buzzFlag = False
 
@@ -105,14 +112,10 @@ def btn_email_only_pressed(channel):
 
 def trigger_buzzer():
     """
-       Sounds the buzzer with a noise level of 1Hz
-       @.start - starts the pwm
-       @.ChangeFrequency sets noise level of buzzer to frequency if 1Hz
+       Sounds the buzzer with maximum output noise level 
     """
     
-    global buzz
-    buzz.start(5) 
-    buzz.ChangeFrequency(1) 
+    GPIO.output(buzzer, GPIO.HIGH)
 
 
 if __name__ == "__main__":
@@ -120,11 +123,13 @@ if __name__ == "__main__":
 
         setup()
         print("ready")
-        testAPI.formatData()
         global buzzFlag
         buzzFlag = True
+        # true indicates program is still running
+        # flag is set to false when buttons are pressed
         while buzzFlag:
-            pass
+            testAPI.formatData()
+
     except Exception as e:
         print(e)
     finally:
