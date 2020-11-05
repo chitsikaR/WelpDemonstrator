@@ -1,5 +1,4 @@
 """
-   Main module
    Imports packages needed for the demonstrator to work
 """
 import RPi.GPIO as GPIO
