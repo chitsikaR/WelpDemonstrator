@@ -1,0 +1,40 @@
+# msmtp needs to be set up to send emails from your device first before attempting to run the demonstrator
+# run the following commands to install the required libraries
+
+sudo apt install msmtp msmtp-mta
+
+# be sure to install any other dependencies if an error occurs
+
+# navigate to the msmtprc file on your Pi using the following:
+cd /etc/msmstprc
+
+# if the file does not exist, create one by running the following:
+cd /etc
+sudo nano msmtprc
+
+# once open in nano, add the mail host(s) of choice
+
+
+# Generics
+defaults
+auth           on
+tls            on
+# following is different from ssmtp:
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+# user specific log location, otherwise use /var/log/msmtp.log, however, 
+# this will create an access violation if you are user pi, and have not changes the access rights
+logfile        ~/.msmtp.log
+
+# Gmail specifics
+account        gmail
+host           smtp.gmail.com
+port           587
+
+from           root@raspi-buster
+user           # insert the email address you want to send emails from
+password       # insert the password for the email account
+
+# you may add hotmail etc
+
+# Default chosen as gmail
+account default : gmail
