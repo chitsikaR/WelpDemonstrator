@@ -40,7 +40,7 @@ TODO
 
 Credits
 -------
-* To everyone who has help me develop this API 
+* To everyone who helped me develop this API and contributes to bug fixes
 
 This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
 
