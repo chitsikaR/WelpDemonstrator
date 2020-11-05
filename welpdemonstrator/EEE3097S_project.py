@@ -1,4 +1,3 @@
-"""Main module."""
 '''Python 3 API for the SN01 GPs module from XinaBox'''
 '''Authors: Laurentia Naidu and Rachel Chitsika'''
 
@@ -32,10 +31,10 @@ global loc
 firebase = firebase.FirebaseApplication('https://welp-2b4f8.firebaseio.com/', None)
 
 # Alamanac token available at: http://www.u-blox.com/services-form.html
-token="MLh4BcS6kU2BLgO-MeLYHQ"
+token = "MLh4BcS6kU2BLgO-MeLYHQ"
 
 # download GNSS almanac
-def getAlamanac():
+def getAlmanac():
     '''download a GNSS almanac to severely reduce Time-To-First-Fix'''
 
     almanac_url = f"http://online-live1.services.u-blox.com/GetOnlineData.ashx?token={token};gnss=gps;datatype=eph,alm,aux,pos;filteronpos;format=aid"
@@ -91,27 +90,26 @@ def getMostRecentLocations():
     return (location_)
 
 
-# generate message as string
+# generate message with address and GPS coordinates as string
 def getTextMessage():
     '''Compiles a string message with the relevant data'''
 
-    # User can enter their own name
     global currentLat
     global currentLong
     global currentTime
-    text_message = '***DISTRESS SIGNAL*** \n'
-    text_message = text_message + 'Laurentia is in danger now at:\n'
-    text_message = text_message + getAddress() + '\n'
+    text_message = getAddress() + '\n'
     text_message = text_message + ('Lat: ' + '{:.2f}'.format(currentLat) +' Long: ' + '{:.2f}'.format(currentLong))
-    return text_message
+    return (text_message)
 
 
-# use lat and long to get address
+# use current lat and long to get address
 def getAddress():
     '''Convert the current location to a nearby street address'''
+    global currentLat
+    global currentLong
 
     locator = Nominatim(user_agent='myGeocoder')
-    currentCoordinates = getCurrentLocation()
+    currentCoordinates = str(currentLat) + ' ' + str(currentLong)
     location = locator.reverse(currentCoordinates)
     location.raw
     return (location.address)
@@ -141,4 +139,4 @@ def formatData():
         sleep(300) # read data every 5 minutes
 
 if __name__ == "__main__":
-    getAlamanac()
+    getAlmanac()
